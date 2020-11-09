@@ -23,7 +23,7 @@ class Renderer implements RendererInterface
     /**
      * @var DefaultRendererInterface
      */
-    private $format;
+    private $renderer;
 
     /**
      * Page constructor.
@@ -53,7 +53,7 @@ class Renderer implements RendererInterface
             );
         }
 
-        $this->format = $this->renderers[$format];
+        $this->renderer = $this->renderers[$format];
     }
 
     /**
@@ -61,6 +61,6 @@ class Renderer implements RendererInterface
      */
     public function render(): string
     {
-        return $this->format->render($this->text);
+        return $this->renderer->render($this->text);
     }
 }
