@@ -4,9 +4,14 @@ require __DIR__ . '/vendor/autoload.php';
 
 use App\Renderer;
 
-/** @var App\Renderer $page */
-$page = new Renderer($argv[2]);
+try {
 
-$formatText = $page->render($argv[1]);
+    /** @var App\Renderer $page */
+    $page = new Renderer($argv[2]);
+    $page->setFormat($argv[1]);
+    echo $page->render();
 
-echo $formatText;
+} catch(Exception $exception) {
+    echo $exception->getMessage();
+}
+

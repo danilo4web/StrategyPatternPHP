@@ -2,7 +2,7 @@
 
 namespace App\Renderer;
 
-class JsonRenderer implements RendererInterface
+class JsonRenderer implements DefaultRendererInterface
 {
     /**
      * @param string $data

@@ -2,7 +2,7 @@
 
 namespace App\Renderer;
 
-class Base64Renderer implements RendererInterface
+class Base64Renderer implements DefaultRendererInterface
 {
     /**
      * @param string $data

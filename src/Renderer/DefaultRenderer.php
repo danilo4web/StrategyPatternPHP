@@ -2,7 +2,7 @@
 
 namespace App\Renderer;
 
-class DefaultRenderer implements RendererInterface
+class DefaultRenderer implements DefaultRendererInterface
 {
     /**
      * @param string $data
