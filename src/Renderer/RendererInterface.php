@@ -6,7 +6,7 @@ interface RendererInterface
 {
     /**
      * @param string $data
-     * @return mixed
+     * @return string
      */
     public function render(string $data): string;
 }

@@ -5,6 +5,7 @@ namespace App;
 use App\Renderer\JsonRenderer;
 use App\Renderer\RendererInterface;
 use App\Renderer\XmlRenderer;
+use App\Renderer\Base64Renderer;
 use App\Renderer\DefaultRenderer;
 
 class Renderer implements RendererInterface
@@ -28,6 +29,7 @@ class Renderer implements RendererInterface
         $this->renderer = [
             'xml' => new XmlRenderer(),
             'json' => new JsonRenderer(),
+            'base64' => new Base64Renderer(),
             'default' => new DefaultRenderer()
         ];
 

@@ -2,7 +2,7 @@
 
 namespace App\Renderer;
 
-class JsonRenderer implements RendererInterface
+class Base64Renderer implements RendererInterface
 {
     /**
      * @param string $data
@@ -10,6 +10,6 @@ class JsonRenderer implements RendererInterface
      */
     public function render(string $data): string
     {
-        return json_encode($data);
+        return base64_encode($data);
     }
 }
