@@ -2,9 +2,10 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-use App\Page;
+use App\Renderer;
 
-$page = new Page('meu nome aqui');
+/** @var App\Renderer $page */
+$page = new Renderer($argv[2]);
 
 $formatText = $page->render($argv[1]);
 
